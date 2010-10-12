@@ -4,6 +4,9 @@ The Google Blog Search Pinging Service API allows users who frequently update th
 Google Blog Search about changes to their blogs. Blogging provider admins can also use this API to notify Google of
 changes to blogs on their platform(s).
 
+This gem utilizes the Google Blog Search Pinging Service API in order to notify Google of updates to your blog so that
+it can be reindexed more quickly.
+
 == Installation
 
   gem install google-blogsearch-pings

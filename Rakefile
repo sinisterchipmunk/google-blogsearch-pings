@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "google-blogsearch-pings"
-    gem.summary = %Q{Ruby consumer of the Google Blog Search Pinging Service API}
-    gem.description = %Q{Ruby consumer of the Google Blog Search Pinging Service API}
+    gem.summary = %Q{Utilizes the Google Blog Search Pinging Service API in order to notify Google of updates to your blog so that it can be reindexed more quickly}
+    gem.description = %Q{Utilizes the Google Blog Search Pinging Service API in order to notify Google of updates to your blog so that it can be reindexed more quickly}
     gem.email = "sinisterchipmunk@gmail.com"
     gem.homepage = "http://thoughtsincomputation.com"
     gem.authors = ["Colin MacKenzie IV"]
