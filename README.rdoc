@@ -1,6 +1,35 @@
 = google-blogsearch-pings
 
-Description goes here.
+The Google Blog Search Pinging Service API allows users who frequently update their blog to programmatically inform
+Google Blog Search about changes to their blogs. Blogging provider admins can also use this API to notify Google of
+changes to blogs on their platform(s).
+
+== Installation
+
+  gem install google-blogsearch-pings
+  
+== Usage
+
+  google = Google::Blogsearch::Ping.new("Name of Blog", "http://www.nameofblog.com/rss.xml")
+  google.ping!
+
+The above usage will infer the website as well as the path to the updated page from the URL of the RSS feed.
+Alternatively, you can set them explicitly using the following syntax:
+
+  google = Google::Blogsearch::Ping.new("Name of Blog", "http://www.nameofblog.com/rss.xml",
+                                        :site => "http://www.thesitename.com",
+                                        :updated => "http://www.nameofblog.com/path/to/updated/file.html")
+  google.ping!
+  
+Finally, you can tag the ping with keywords:
+
+  google = Google::Blogsearch::Ping.new("Name of Blog", "http://www.nameofblog.com/rss.xml",
+                                        :site => "http://www.thesitename.com",
+                                        :updated => "http://www.nameofblog.com/path/to/updated/file.html",
+                                        :tags => %w(ruby rails))
+  google.tags #=> ["ruby", "rails"]
+  
+  google.ping!
 
 == Note on Patches/Pull Requests
  
